@@ -8,13 +8,38 @@
 </head>
 <body>
 
-	
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Libros</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        	<a class="nav-link active" aria-current="page" href="#">Libros (otra vez)</a>
+        </li>
+        <li class="nav-item">
+          <button><a class="nav-link" th:href="@{/form}">Crear Libro</a></button>
+        </li>
+        
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>-->
+      </ul>
+      <form class="d-flex" role="search">
+        <!--<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit"> </button>-->
+      </form>
+    </div>
+  </div>
+</nav>
 
 	<div class="container">
+		<!--<p><a th:href="@{/form}" class="btn btn-success btn-xs">crear libro</a></p>-->
 		<h1
 			class="text-secondary border border-success border-top-0 border-left-0 border-right-0"
 			th:text="${encabezado}"></h1>
-		<p><a th:href="@{/form}" class="btn btn-success btn-xs">crear libro</a></p>
 		<table class="table table-striped">
 			<thead class="bg-dark">
 				<tr>

@@ -26,8 +26,8 @@ public class LibroDaoImpl implements ILibroDao {
 	@Override
 	@Transactional
 	public void save(Libro libro) {
-		Long valLong = null;
-		if (libro.getId() != valLong && libro.getId() > 0) {
+		//Long valLong = null;
+		if (libro.getId() != 0 && libro.getId() > 0) {
 			em.merge(libro);
 		} else {
 			em.persist(libro);

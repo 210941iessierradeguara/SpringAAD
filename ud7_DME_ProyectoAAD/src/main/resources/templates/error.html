@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="ERROR">Insert title here</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div style="text-align: center;">
+		<h1>¿Que haces aquí?</h1>		
+		<p>Shoo, shoo</p>
+		
+		<img th:src="@{/img/away-from-clipart-14.gif}" alt="Go_away">
+		
+		<p>Vete. Venga. Fush</p>
+		<button><a class="nav-link" th:href="@{/listar}">A la página principal</a></button>
+	</div>
+</body>
+</html>

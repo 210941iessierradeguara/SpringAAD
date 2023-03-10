@@ -24,7 +24,7 @@ public class LibroController {
 	@Autowired
 	private ILibroDao iLibroDao;
 	
-	@RequestMapping(value = "/listar", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String listar(Model model)
 	{
 		model.addAttribute("encabezado", "Listado de libros");
@@ -50,7 +50,7 @@ public class LibroController {
 		
 		iLibroDao.save(libro);
 		status.setComplete();
-		return "redirect:listar";
+		return "redirect:";
 	}
 	
 	@RequestMapping(value="/form/{id}")
@@ -61,7 +61,7 @@ public class LibroController {
 		if(id > 0) {
 			libro = iLibroDao.findOne(id);
 		} else {
-			return "redirect:/listar";
+			return "redirect:/";
 		}
 		model.put("libro", libro);
 		model.put("encabezado", "Editar Libro");
@@ -74,6 +74,6 @@ public class LibroController {
 		if(id > 0) {
 			iLibroDao.delete(id);
 		}
-		return "redirect:/listar";
+		return "redirect:/";
 	}
 }
